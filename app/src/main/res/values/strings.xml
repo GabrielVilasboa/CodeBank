@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MainActivity</string>
+    <string name="user_image">UserImage</string>
+</resources>
