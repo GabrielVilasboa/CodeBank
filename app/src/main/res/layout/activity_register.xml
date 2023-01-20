@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_register"
+        android:text="Cadastre-se"
+        android:textSize="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome completo"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        />
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        />
+    <EditText
+        android:id="@+id/edit_cpf"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="CPF"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        />
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        />
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="15dp"
+        android:text="Cadastrar"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Termos e condições"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
