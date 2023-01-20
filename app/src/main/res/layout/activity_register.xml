@@ -2,65 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@drawable/background_login"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_register"
-        android:text="Cadastre-se"
-        android:textSize="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginBottom="30dp"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:text="Cadastre-se"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edit_name"
-
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="Nome completo"
-        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
-        />
+        android:gravity="center"
+        android:hint="Nome completo"
+        android:inputType="text"
+        android:textColorHint="@color/white" />
+
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
-        />
+        android:gravity="center"
+        android:hint="E-mail"
+        android:inputType="text"
+        android:textColorHint="@color/white" />
+
     <EditText
         android:id="@+id/edit_cpf"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="CPF"
-        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
-        />
+        android:gravity="center"
+        android:hint="CPF"
+        android:inputType="text"
+        android:textColorHint="@color/white" />
+
     <EditText
         android:id="@+id/edit_password"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
-        />
+        android:gravity="center"
+        android:hint="Senha"
+        android:inputType="numberPassword"
+        android:textColorHint="@color/white" />
+
     <Button
         android:id="@+id/button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
         android:layout_marginBottom="15dp"
-        android:text="Cadastrar"/>
+        android:backgroundTint="@color/pink"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,15 +81,15 @@
         <CheckBox
             android:id="@+id/check_terms"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/text_terms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:text="Termos e condições"
-            />
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

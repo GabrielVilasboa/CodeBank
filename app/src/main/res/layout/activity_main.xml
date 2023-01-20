@@ -52,19 +52,15 @@
         app:layout_constraintTop_toTopOf="@id/text_amount_money" />
     <!--Balance-->
 
-
-
-
-
     <!--ScrollOptions-->
     <HorizontalScrollView
         android:id="@+id/scrollOptions"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/view_code_coin"
         app:layout_constraintTop_toBottomOf="@id/container_view"
-        tools:layout_editor_absoluteX="0dp"
-        android:scrollbars="none">
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
