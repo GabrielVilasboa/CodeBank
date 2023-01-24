@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MainActivity</string>
     <string name="user_image">UserImage</string>
+    <string name="title_login">CodeBank</string>
+    <string name="subtitle_login">Login</string>
+    <string name="edit_cpf">CPF:</string>
+    <string name="edit_password">Senha:</string>
+    <string name="button_enter">Entrar</string>
+    <string name="text_register">Cadastre-se aqui</string>
 </resources>
