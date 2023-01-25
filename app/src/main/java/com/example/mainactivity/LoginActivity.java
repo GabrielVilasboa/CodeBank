@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         textRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, com.example.codebank.RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -54,7 +54,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void verifyCpf(){
-        verifyPassword();
+        Intent intent2 = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent2);
     }
 
     private void verifyPassword(){

@@ -47,6 +47,8 @@
         android:hint="CPF"
         android:inputType="text"
         android:padding="4dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="16sp" />
 
     <EditText
@@ -62,6 +64,8 @@
         android:hint="Senha"
         android:inputType="numberPassword"
         android:padding="4dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="16sp" />
 
     <Button
