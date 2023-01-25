@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "307731843773",
+    "project_id": "codebank-52e13",
+    "storage_bucket": "codebank-52e13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307731843773:android:afa9b1971fcb377bfd85d4",
+        "android_client_info": {
+          "package_name": "com.example.codebank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307731843773-fj321kf7avcf4fik7tfrv29ao1a9upt5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnNzXNgUGnlquMOK3QYY-us8mv3pMYOIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307731843773-fj321kf7avcf4fik7tfrv29ao1a9upt5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
