@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:fontFamily="monospace"
-        android:text="CodeBank"
+        android:text="@string/title_login"
         android:textColor="@color/white"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -29,7 +29,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
         android:fontFamily="monospace"
-        android:text="Login"
+        android:text="@string/subtitle_login"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -44,7 +44,7 @@
         android:layout_marginEnd="70dp"
         android:background="@drawable/edit_text"
         android:gravity="center"
-        android:hint="CPF"
+        android:hint="@string/edit_cpf"
         android:inputType="text"
         android:padding="4dp"
         android:textColor="@color/black"
@@ -61,7 +61,7 @@
         android:layout_marginEnd="70dp"
         android:background="@drawable/edit_text"
         android:gravity="center"
-        android:hint="Senha"
+        android:hint="@string/edit_password"
         android:inputType="numberPassword"
         android:padding="4dp"
         android:textColor="@color/black"
@@ -75,9 +75,9 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="100dp"
-        android:backgroundTint="@color/pink"
+        android:backgroundTint="@color/main_color"
         android:fontFamily="monospace"
-        android:text="Entrar"
+        android:text="@string/button_enter"
         android:textColor="@color/white" />
 
     <TextView
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:gravity="center"
-        android:text="Cadastre-se aqui"
+        android:text="@string/text_register"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:gravity="center"
-        android:text="Esqueci minha senha"
+        android:text="@string/text_reset_password"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
