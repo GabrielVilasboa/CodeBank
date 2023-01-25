@@ -3,8 +3,14 @@
     <string name="user_image">UserImage</string>
     <string name="title_login">CodeBank</string>
     <string name="subtitle_login">Login</string>
-    <string name="edit_cpf">CPF:</string>
-    <string name="edit_password">Senha:</string>
+    <string name="edit_cpf">CPF</string>
+    <string name="edit_password">Senha</string>
     <string name="button_enter">Entrar</string>
     <string name="text_register">Cadastre-se aqui</string>
+    <string name="title_register">Cadastre-se</string>
+    <string name="edit_name">Nome completo</string>
+    <string name="button_register">Cadastrar</string>
+    <string name="text_terms">Termos e condições</string>
+    <string name="edit_email">E-mail</string>
+    <string name="text_balance">800 R$</string>
 </resources>
