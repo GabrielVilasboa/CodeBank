@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
-            android:name="com.example.codebank.RegisterActivity"
+            android:name="com.example.mainactivity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
