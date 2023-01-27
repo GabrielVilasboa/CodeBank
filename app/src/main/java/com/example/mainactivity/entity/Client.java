@@ -1,8 +1,8 @@
-package com.example.mainactivity;
+package com.example.mainactivity.entity;
 
 public class Client {
-    String name, CPF, email, password, adress;
-    Float currentBalance;
+    public String name, CPF, email, password, adress;
+    public Float currentBalance;
     //Extract historic new Extract;
     //CodeCard cart new CodeCard;
     public Client(){

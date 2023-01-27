@@ -47,6 +47,7 @@
         android:layout_marginBottom="15dp"
         android:gravity="center"
         android:hint="@string/edit_cpf"
+
         android:inputType="text"
         android:textColorHint="@color/white" />
 

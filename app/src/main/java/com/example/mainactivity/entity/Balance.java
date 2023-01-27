@@ -1,4 +1,4 @@
-package com.example.mainactivity;
+package com.example.mainactivity.entity;
 
 import java.util.ArrayList;
 
