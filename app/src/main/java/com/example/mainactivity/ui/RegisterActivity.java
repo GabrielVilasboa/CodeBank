@@ -11,10 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.mainactivity.R;
 import com.example.mainactivity.data.DB;
 import com.example.mainactivity.entity.Client;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 
 public class RegisterActivity extends AppCompatActivity {
 
-    Client client;
+
+    FirebaseFirestore dbOne = FirebaseFirestore.getInstance();
+    Client client = new Client();
     DB db;
 
     Button registerButton;
@@ -30,7 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        client = new Client();
         db = new DB();
 
         //id declaration
@@ -40,37 +43,48 @@ public class RegisterActivity extends AppCompatActivity {
         editCpf = findViewById(R.id.edit_cpf);
         editPassword = findViewById(R.id.edit_password);
 
+
         registerButton.setOnClickListener(this::RegisterClient);
     }
 
-    public void RegisterClient(View view){
+    public void RegisterClient(View view) {
 
-        if (editName.getText() != null){
-            client.name = editName.getText().toString();
+        boolean result = checkClient();
+
+        if(result){
+            db.AddClientInDataBase(client);
+            JoinActivityMain();
+        } else {
+            db.GetClientData(client.CPF);
         }
-        if (editCpf.getText() != null){
-            client.CPF = editCpf.getText().toString();
-        }
-        if (editEmail.getText() != null){
-            client.email = editEmail.getText().toString();
-        }
-        if (editPassword.getText() != null){
-            client.password = editPassword.getText().toString();
-        }
-
-
-        JoinActivityMain(db.AddClientInDataBase(client));
-
-
-
-
     }
 
-    public void JoinActivityMain(boolean result){
-        if (result) {
+
+    // logic error
+    public boolean checkClient(){
+
+        if (editName.getText() != null && editName.getText().toString() != "1") {
+            client.name = editName.getText().toString();
+            if (editCpf.getText() != null && editCpf.getText().toString() != "1") {
+                client.CPF = editCpf.getText().toString();
+                if (editEmail.getText() != null && editEmail.getText().toString() != "1") {
+                    client.email = editEmail.getText().toString();
+                    if (editPassword.getText() != null ) {
+                        client.password = editPassword.getText().toString();
+                        return true;
+                    }else return false;
+                }else return false;
+            }else return false;
+        }else return false;
+    }
+
+    //logic error
+
+
+    public void JoinActivityMain() {
             Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
             startActivity(intent);
-        }
+
     }
 
 }
