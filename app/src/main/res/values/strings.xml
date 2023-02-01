@@ -14,4 +14,5 @@
     <string name="edit_email">E-mail</string>
     <string name="text_balance">800 R$</string>
     <string name="text_reset_password">Esqueci minha senha</string>
+    <string name="text_error_message">CPF ou Senha inválido</string>
 </resources>
