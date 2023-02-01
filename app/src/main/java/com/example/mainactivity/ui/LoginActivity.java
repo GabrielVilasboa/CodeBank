@@ -56,8 +56,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void verifyCpf(){
-        Intent intent2 = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(intent2);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void verifyPassword(){
