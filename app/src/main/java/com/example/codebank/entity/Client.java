@@ -1,4 +1,4 @@
-package com.example.mainactivity.entity;
+package com.example.codebank.entity;
 
 public class Client {
     public String name, CPF, email, password, adress;
@@ -32,6 +32,6 @@ public class Client {
     }
     private void invert(){
     }
-    private void PayTicket(){
+    private void payTicket(){
     }
 }

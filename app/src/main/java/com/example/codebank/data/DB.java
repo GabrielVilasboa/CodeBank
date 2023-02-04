@@ -1,13 +1,12 @@
-package com.example.mainactivity.data;
+package com.example.codebank.data;
 
 import static android.content.ContentValues.TAG;
 
 import android.util.Log;
 
-import com.example.mainactivity.entity.Client;
+import com.example.codebank.entity.Client;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -24,7 +23,7 @@ public class DB {
     public DB() {
     }
 
-    public void AddClientInDataBase(Client client) {
+    public void addClientInDataBase(Client client) {
 
 
         Map<String, String> clientData = new HashMap();
@@ -47,7 +46,7 @@ public class DB {
                 });;
     }
 
-    public void GetClientData(String CPF) {
+    public void getClientData(String CPF) {
 
         DocumentReference clientDoc = db.collection("Clients").document(CPF);
         clientDoc.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -56,7 +55,7 @@ public class DB {
                 Client client = documentSnapshot.toObject(Client.class);
                 System.out.printf(client.getName());
             }
-        });;
+        });
 
 
 

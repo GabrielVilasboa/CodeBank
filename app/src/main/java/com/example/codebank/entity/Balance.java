@@ -1,6 +1,4 @@
-package com.example.mainactivity.entity;
-
-import java.util.ArrayList;
+package com.example.codebank.entity;
 
 public class Balance {
     Float name;
