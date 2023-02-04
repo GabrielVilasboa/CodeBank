@@ -2,10 +2,12 @@ package com.example.codebank.entity;
 
 public class Balance {
     Float name;
+
     //ArrayList<Historic> historic = new ArrayList();
-    public Balance(){
+    public Balance() {
 
     }
+
     void movimentationBalance() {
 
     }

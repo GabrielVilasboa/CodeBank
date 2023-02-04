@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.codebank.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -48,17 +50,17 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void setData(){
+    private void setData() {
         this.cpf = editCPF.getText().toString();
         this.password = editPassword.getText().toString();
     }
 
-    private void verifyCpf(){
+    private void verifyCpf() {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
-    private void verifyPassword(){
+    private void verifyPassword() {
     }
 
 }

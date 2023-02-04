@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class DB {
 
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public DB() {
     }
@@ -43,7 +43,7 @@ public class DB {
                     public void onFailure(@NonNull Exception e) {
                         Log.w(TAG, "Error adding document", e);
                     }
-                });;
+                });
     }
 
     public void getClientData(String CPF) {
@@ -56,8 +56,6 @@ public class DB {
                 System.out.printf(client.getName());
             }
         });
-
-
 
 
     }

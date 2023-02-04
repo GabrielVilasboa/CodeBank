@@ -22,16 +22,22 @@ public class Client {
     public String getPassword() {
         return password;
     }
-    public Client(){
+
+    public Client() {
     }
-    private void pix(){
+
+    private void pix() {
     }
-    private void ted(){
+
+    private void ted() {
     }
-    private void doc(){
+
+    private void doc() {
     }
-    private void invert(){
+
+    private void invert() {
     }
-    private void payTicket(){
+
+    private void payTicket() {
     }
 }
