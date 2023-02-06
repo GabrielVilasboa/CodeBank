@@ -1,4 +1,4 @@
-package com.example.mainactivity.entity;
+package com.example.codebank.entity;
 
 public class Client {
     public String name, CPF, email, password, adress;
@@ -22,16 +22,22 @@ public class Client {
     public String getPassword() {
         return password;
     }
-    public Client(){
+
+    public Client() {
     }
-    private void pix(){
+
+    private void pix() {
     }
-    private void ted(){
+
+    private void ted() {
     }
-    private void doc(){
+
+    private void doc() {
     }
-    private void invert(){
+
+    private void invert() {
     }
-    private void PayTicket(){
+
+    private void payTicket() {
     }
 }

@@ -1,4 +1,4 @@
-package com.example.mainactivity.ui;
+package com.example.codebank.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mainactivity.R;
-import com.example.mainactivity.business.ClientBusiness;
-import com.example.mainactivity.data.DB;
-import com.example.mainactivity.entity.Client;
+import com.example.codebank.R;
+import com.example.codebank.business.ClientBusiness;
+import com.example.codebank.data.DB;
+import com.example.codebank.entity.Client;
 
 import java.util.Objects;
 
@@ -50,24 +50,24 @@ public class RegisterActivity extends AppCompatActivity {
         textErrorMessage = findViewById(R.id.text_error_message);
 
 
-        registerButton.setOnClickListener(this::RegisterClient);
+        registerButton.setOnClickListener(this::registerClient);
     }
 
-    public void RegisterClient(View view) {
+    public void registerClient(View view) {
 
-        if (clientBusiness.VerifyClient(editName, editCpf, editEmail, editPassword)) {
+        if (clientBusiness.verifyClient(editName, editCpf, editEmail, editPassword, textErrorMessage)) {
 
             client.name = editName.getText().toString();
             client.CPF = editCpf.getText().toString();
             client.email = editEmail.getText().toString();
             client.password = editPassword.getText().toString();
 
-            db.AddClientInDataBase(client);
-            JoinActivityMain();
+            db.addClientInDataBase(client);
+            joinActivityMain();
         }
     }
 
-    public void JoinActivityMain() {
+    public void joinActivityMain() {
         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
         startActivity(intent);
     }

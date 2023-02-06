@@ -1,4 +1,4 @@
-package com.example.mainactivity;
+package com.example.codebank;
 
 import android.content.Context;
 

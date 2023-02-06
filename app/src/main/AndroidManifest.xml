@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.mainactivity">
+    package="com.example.codebank">
 
     <application
         android:allowBackup="true"
@@ -14,13 +14,13 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.example.codebank.ui.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name="com.example.codebank.ui.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.LoginActivity"
+            android:name="com.example.codebank.ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

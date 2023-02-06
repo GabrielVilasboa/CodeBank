@@ -1,17 +1,15 @@
-package com.example.mainactivity.ui;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.codebank.ui;
 
 import android.os.Bundle;
 
-import com.example.mainactivity.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.example.codebank.R.layout.activity_main);
 
         getSupportActionBar().hide();
     }

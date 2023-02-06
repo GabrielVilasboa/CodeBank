@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MainActivity</string>
+    <string name="app_name">CodeBank</string>
     <string name="user_image">UserImage</string>
     <string name="title_login">CodeBank</string>
     <string name="subtitle_login">Login</string>
@@ -15,4 +15,5 @@
     <string name="text_balance">800 R$</string>
     <string name="text_reset_password">Esqueci minha senha</string>
     <string name="text_error_message">CPF ou Senha inválido</string>
+    <string name="font">casual</string>
 </resources>
