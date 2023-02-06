@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_login"
     android:orientation="vertical"
-    tools:context=".ui.LoginActivity">
+    tools:context="com.example.codebank.ui.LoginActivity">
 
 
     <TextView
@@ -104,7 +104,6 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@string/font"
         android:gravity="center"
-        android:textColor="@color/main_color"
         android:textSize="16sp" />
 
 </LinearLayout>

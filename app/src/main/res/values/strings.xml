@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MainActivity</string>
+    <string name="app_name">CodeBank</string>
     <string name="user_image">UserImage</string>
     <string name="title_login">CodeBank</string>
     <string name="subtitle_login">Login</string>
