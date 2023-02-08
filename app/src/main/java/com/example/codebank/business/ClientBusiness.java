@@ -9,31 +9,38 @@ public class ClientBusiness {
 
     public boolean verifyClient(EditText name, EditText cpf, EditText email, EditText password, TextView errorMessage) {
 
-        return clientValidName(name, errorMessage) && clientValidCpf(cpf) && clientValidEmail(email, errorMessage) && clientValidPassword(password, errorMessage);
+        return clientValidName(name, errorMessage) &&
+                clientValidEmail(email, errorMessage) &&
+                clientValidCpf(cpf, errorMessage) &&
+                clientValidPassword(password, errorMessage);
     }
 
-    private boolean clientValidCpf(EditText cpfObj) {
+    private boolean clientValidCpf(EditText cpfObj, TextView errorText) {
 
         if (cpfObj == null) return false;
 
         String cpf = cpfObj.getText().toString().trim();
         String cpfHelper = "";
         int i;
-        if (cpf.length() == 9) {
-            for (i = 0; i < 9; i++) {
+        if (cpf.length() == 11) {
+            for (i = 0; i < 11; i++) {
                 cpfHelper = (cpfHelper + cpf.charAt(i));
-                if (i == 3 || i == 6) {
+                if (i == 2 || i == 5) {
                     cpfHelper = (cpfHelper + ".");
                 }
-                if (i == 7) {
+                if (i == 8) {
                     cpfHelper = (cpfHelper + "-");
                 }
             }
             cpfObj.setText(cpfHelper);
             return true;
         }
-        cpfObj.setText(cpf);
-        return cpf.length() == 11;
+        if (cpf.length() == 14) {
+            return true;
+        } else {
+            errorText.setText("CPF invalido!");
+            return false;
+        }
     }
 
 
