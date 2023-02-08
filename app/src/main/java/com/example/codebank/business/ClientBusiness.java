@@ -9,12 +9,40 @@ public class ClientBusiness {
 
     public boolean verifyClient(EditText name, EditText cpf, EditText email, EditText password, TextView errorMessage) {
 
-        return clientValidName(name, errorMessage) && clientValidCpf(cpf) && clientValidEmail(email) && clientValidPassword(password, errorMessage);
+        return clientValidName(name, errorMessage) &&
+                clientValidEmail(email, errorMessage) &&
+                clientValidCpf(cpf, errorMessage) &&
+                clientValidPassword(password, errorMessage);
     }
 
-    private boolean clientValidCpf(EditText cpfObj) {
-        return cpfObj != null && !cpfObj.getText().toString().isEmpty();
+    private boolean clientValidCpf(EditText cpfObj, TextView errorText) {
+
+        if (cpfObj == null) return false;
+
+        String cpf = cpfObj.getText().toString().trim();
+        String cpfHelper = "";
+        int i;
+        if (cpf.length() == 11) {
+            for (i = 0; i < 11; i++) {
+                cpfHelper = (cpfHelper + cpf.charAt(i));
+                if (i == 2 || i == 5) {
+                    cpfHelper = (cpfHelper + ".");
+                }
+                if (i == 8) {
+                    cpfHelper = (cpfHelper + "-");
+                }
+            }
+            cpfObj.setText(cpfHelper);
+            return true;
+        }
+        if (cpf.length() == 14) {
+            return true;
+        } else {
+            errorText.setText("CPF invalido!");
+            return false;
+        }
     }
+
 
     private boolean clientValidName(EditText nameObj, TextView errorText) {
         if (nameObj != null && !(nameObj.getText().toString().length() < 7)) {
@@ -26,9 +54,28 @@ public class ClientBusiness {
         }
     } //Check
 
-    private boolean clientValidEmail(EditText emailObj) {
-        return emailObj != null && !emailObj.getText().toString().isEmpty();
-    }
+    private boolean clientValidEmail(EditText emailObj, TextView errorText) {
+
+        int i;
+
+        if (emailObj != null && !emailObj.getText().toString().isEmpty()) {
+            String email = emailObj.getText().toString();
+            for (i = 0; i != email.length(); i++) {
+                if (email.charAt(i) == '@') {
+                    return true;
+                }
+            }
+            i++;
+            if (i == (email.length() + 1)) {
+                errorText.setText("Por Gentileza, insira um email válido");
+                return false;
+            }
+        } else {
+            errorText.setText("Por Gentileza digite seu Email!");
+            return false;
+        }
+        return false;
+    } //Check
 
     private boolean clientValidPassword(EditText passwordObj, TextView errorText) {
         if (passwordObj != null && !(passwordObj.getText().length() < 8)) {
@@ -38,5 +85,5 @@ public class ClientBusiness {
             return false;
         }
 
-    }
+    } //Check
 }
