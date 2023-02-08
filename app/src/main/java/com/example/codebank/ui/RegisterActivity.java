@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.codebank.R;
-import com.example.codebank.business.ClientBusiness;
+import com.example.codebank.business.RegisterBusiness;
 import com.example.codebank.data.DB;
 import com.example.codebank.entity.Client;
 
@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     Client client = new Client();
     DB db;
-    ClientBusiness clientBusiness;
+    RegisterBusiness registerBusiness;
 
     Button registerButton;
     EditText editName;
@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         db = new DB();
-        clientBusiness = new ClientBusiness();
+        registerBusiness = new RegisterBusiness();
 
         //id declaration
         registerButton = findViewById(R.id.button_register);
@@ -56,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void registerClient(View view) {
 
-        if (clientBusiness.verifyClient(editName, editCpf, editEmail, editPassword, textErrorMessage)) {
+        if (registerBusiness.verifyClient(editName, editCpf, editEmail, editPassword, textErrorMessage)) {
 
             client.name = editName.getText().toString();
             client.CPF = editCpf.getText().toString();
