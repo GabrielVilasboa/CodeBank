@@ -5,26 +5,26 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class ClientBusiness {
+public class RegisterBusiness {
 
-    public boolean verifyClient(EditText name, EditText cpf, EditText email, EditText password, TextView errorMessage) {
+    public boolean verifyClient(EditText name, EditText CPF, EditText email, EditText password, TextView errorMessage) {
 
         return clientValidName(name, errorMessage) &&
                 clientValidEmail(email, errorMessage) &&
-                clientValidCpf(cpf, errorMessage) &&
+                clientValidCpf(CPF, errorMessage) &&
                 clientValidPassword(password, errorMessage);
     }
 
-    private boolean clientValidCpf(EditText cpfObj, TextView errorText) {
+    protected boolean clientValidCpf(EditText cpfObj, TextView errorText) {
 
         if (cpfObj == null) return false;
 
-        String cpf = cpfObj.getText().toString().trim();
+        String CPF = cpfObj.getText().toString().trim();
         String cpfHelper = "";
         int i;
-        if (cpf.length() == 11) {
+        if (CPF.length() == 11) {
             for (i = 0; i < 11; i++) {
-                cpfHelper = (cpfHelper + cpf.charAt(i));
+                cpfHelper = (cpfHelper + CPF.charAt(i));
                 if (i == 2 || i == 5) {
                     cpfHelper = (cpfHelper + ".");
                 }
@@ -35,7 +35,7 @@ public class ClientBusiness {
             cpfObj.setText(cpfHelper);
             return true;
         }
-        if (cpf.length() == 14) {
+        if (CPF.length() == 14) {
             return true;
         } else {
             errorText.setText("CPF invalido!");
