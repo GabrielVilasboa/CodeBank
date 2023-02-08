@@ -5,7 +5,8 @@ public class Client {
     public Float currentBalance;
     //Extract historic new Extract;
     //CodeCard cart new CodeCard;
-
+    public Client() {
+    }
 
     public String getName() {
         return name;
@@ -23,8 +24,7 @@ public class Client {
         return password;
     }
 
-    public Client() {
-    }
+
 
     private void pix() {
     }

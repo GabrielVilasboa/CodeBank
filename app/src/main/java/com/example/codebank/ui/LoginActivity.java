@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.codebank.R;
+import com.example.mainactivity.R;
 
 public class LoginActivity extends AppCompatActivity {
     String cpf, password;
@@ -56,11 +57,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void verifyCpf() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(intent);
+
     }
 
     private void verifyPassword() {
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
 }
