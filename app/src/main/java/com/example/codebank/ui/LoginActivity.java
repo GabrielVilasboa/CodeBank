@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (loginBusiness.findClient(editPassword, editCPF, textError)) {
+                if (loginBusiness.findClient(editPassword, editCPF, textError, LoginActivity.this)) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                 }

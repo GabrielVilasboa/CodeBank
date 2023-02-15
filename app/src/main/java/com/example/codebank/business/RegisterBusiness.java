@@ -1,5 +1,6 @@
 package com.example.codebank.business;
 
+import android.content.Context;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -7,19 +8,21 @@ import java.util.Locale;
 
 public class RegisterBusiness {
 
-    public boolean verifyClient(EditText name, EditText CPF, EditText email, EditText password, TextView errorMessage) {
+    public boolean verifyClient(EditText name, EditText CPF, EditText email, EditText password, TextView errorMessage, Context context) {
+
+
 
         return clientValidName(name, errorMessage) &&
                 clientValidEmail(email, errorMessage) &&
-                clientValidCpf(CPF, errorMessage) &&
+                clientValidCpf(CPF, errorMessage, context) &&
                 clientValidPassword(password, errorMessage);
     }
 
-    protected boolean clientValidCpf(EditText cpfObj, TextView errorText) {
+    protected boolean clientValidCpf(EditText cpfObj, TextView errorText,Context context) {
 
-        if (cpfObj == null) return false;
+        return  (cpfObj != null);
 
-        String CPF = cpfObj.getText().toString().trim();
+        /*String CPF = cpfObj.getText().toString().trim();
         String cpfHelper = "";
         int i;
         if (CPF.length() == 11) {
@@ -35,12 +38,8 @@ public class RegisterBusiness {
             cpfObj.setText(cpfHelper);
             return true;
         }
-        if (CPF.length() == 14) {
-            return true;
-        } else {
-            errorText.setText("CPF invalido!");
-            return false;
-        }
+        errorText.setText("cpf invalido");
+        return false;*/
     }
 
 

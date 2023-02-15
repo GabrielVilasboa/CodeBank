@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.codebank.R;
 import com.example.codebank.business.RegisterBusiness;
 import com.example.codebank.data.DB;
-import com.example.codebank.entity.Client;
-
 
 import java.util.Objects;
 
@@ -21,7 +19,6 @@ import java.util.Objects;
 public class RegisterActivity extends AppCompatActivity {
 
 
-    Client client = new Client();
     DB db;
     RegisterBusiness registerBusiness;
 
@@ -56,14 +53,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void registerClient(View view) {
 
-        if (registerBusiness.verifyClient(editName, editCpf, editEmail, editPassword, textErrorMessage)) {
+        if (registerBusiness.verifyClient(editName, editCpf, editEmail, editPassword, textErrorMessage , this)) {
 
-            client.name = editName.getText().toString();
-            client.CPF = editCpf.getText().toString();
-            client.email = editEmail.getText().toString();
-            client.password = editPassword.getText().toString();
+            DB.client.setName(editName.getText().toString());
+            DB.client.setCPF(editCpf.getText().toString());
+            DB.client.setEmail(editEmail.getText().toString());
+            DB.client.setPassword(editPassword.getText().toString());
 
-            db.addClientInDataBase(client);
+            db.addClientInDataBase();
             joinActivityMain();
         }
     }
