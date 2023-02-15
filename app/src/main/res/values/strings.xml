@@ -12,7 +12,7 @@
     <string name="button_register">Cadastrar</string>
     <string name="text_terms">Termos e condições</string>
     <string name="edit_email">E-mail</string>
-    <string name="text_balance">800 R$</string>
+    <string name="text_balance">R$ 2.850.000,00</string>
     <string name="text_reset_password">Esqueci minha senha</string>
     <string name="text_error_message">CPF ou Senha inválido</string>
     <string name="font">casual</string>
