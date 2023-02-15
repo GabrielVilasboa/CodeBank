@@ -5,11 +5,14 @@ import static android.content.ContentValues.TAG;
 import android.util.Log;
 
 import com.example.codebank.entity.Client;
+<<<<<<< Updated upstream
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+=======
+>>>>>>> Stashed changes
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -25,6 +28,7 @@ public class DB {
     public DB() {
     }
 
+<<<<<<< Updated upstream
     public void addClientInDataBase(Client client) {
 
 
@@ -69,6 +73,12 @@ public class DB {
             return false;
         }
         return true;
+=======
+    //Wait Bugs Fixeds
+
+    public void addClientInDataBase() {
+        db.collection("Clients").document(client.getCPF()).set(client);
+>>>>>>> Stashed changes
     }
 }
 

@@ -1,8 +1,11 @@
 package com.example.codebank.business;
 
+<<<<<<< Updated upstream
 import android.widget.EditText;
 import android.widget.TextView;
 
+=======
+>>>>>>> Stashed changes
 import com.example.codebank.data.DB;
 
 public class LoginBusiness extends RegisterBusiness{
@@ -10,6 +13,7 @@ public class LoginBusiness extends RegisterBusiness{
 
     DB db = new DB();
 
+<<<<<<< Updated upstream
     public boolean findClient(EditText password, EditText CPF, TextView errorText){
 
         if (clientValidCpf(CPF, errorText)){
@@ -27,5 +31,11 @@ public class LoginBusiness extends RegisterBusiness{
         }
         return false;
 
+=======
+    //Wait Bugs Fixeds
+
+    public boolean findClient() {
+        return true;
+>>>>>>> Stashed changes
     }
 }

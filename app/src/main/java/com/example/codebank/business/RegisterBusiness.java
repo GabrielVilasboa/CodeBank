@@ -8,6 +8,11 @@ import java.util.Locale;
 public class RegisterBusiness {
 
     public boolean verifyClient(EditText name, EditText CPF, EditText email, EditText password, TextView errorMessage) {
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 
         return clientValidName(name, errorMessage) &&
                 clientValidEmail(email, errorMessage) &&
@@ -17,8 +22,11 @@ public class RegisterBusiness {
 
     protected boolean clientValidCpf(EditText cpfObj, TextView errorText) {
 
+<<<<<<< Updated upstream
         if (cpfObj == null) return false;
 
+=======
+>>>>>>> Stashed changes
         String CPF = cpfObj.getText().toString().trim();
         String cpfHelper = "";
         int i;
@@ -35,12 +43,17 @@ public class RegisterBusiness {
             cpfObj.setText(cpfHelper);
             return true;
         }
+<<<<<<< Updated upstream
         if (CPF.length() == 14) {
             return true;
         } else {
             errorText.setText("CPF invalido!");
             return false;
         }
+=======
+        errorText.setText("cpf invalido");
+        return false;
+>>>>>>> Stashed changes
     }
 
 
