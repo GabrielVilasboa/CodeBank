@@ -81,6 +81,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ic_pix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -111,6 +112,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ic_transfers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -141,6 +143,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ic_deposit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -171,36 +174,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/person_style"
-                android:padding="20dp"
-                android:src="@drawable/ic_qrcode" />
-
-            <TextView
-                android:id="@+id/text_qrcode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="QRcode"
-                android:fontFamily="@string/font"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:layout_gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/background_main"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <ImageView
+                android:id="@+id/ic_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -231,6 +205,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ic_saving"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -261,6 +236,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ic_bill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -291,6 +267,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/ic_loan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

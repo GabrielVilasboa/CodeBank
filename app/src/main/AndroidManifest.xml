@@ -14,16 +14,23 @@
         android:theme="@style/Theme.codebank"
         tools:targetApi="31">
         <activity
-            android:name="com.example.codebank.ui.MainActivity"
+            android:name=".ui.TransfersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.PixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ui.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.codebank.ui.RegisterActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.codebank.ui.LoginActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
